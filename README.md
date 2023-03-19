@@ -1,2 +1,2 @@
 # My_portpolio
-![Alt text](https://assets.digitalocean.com/articles/alligator/Untitled10.png "a title")
+![Alt text](https://github.com/crystalcoder1029/My_portpolio/blob/main/images/Untitled10.png "a title")

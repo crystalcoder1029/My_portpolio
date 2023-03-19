@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)#services -->
+<html lang="en" data-lt-installed="true" data-whatinput="mouse" data-whatintent="mouse"
+    class=" whatinput-types-initial whatinput-types-mouse whatinput-types-keyboard">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css" data-tippy-stylesheet="">
+        .tippy-iOS {
+            cursor: pointer !important;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .tippy-popper {
+            transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+            max-width: calc(100% - 8px);
+            pointer-events: none;
+            outline: 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop {
+            border-radius: 40% 40% 0 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-roundarrow {
+            bottom: -7px;
+            bottom: -6.5px;
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            margin: 0 3px
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg)
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-arrow {
+            border-top: 8px solid #333;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            bottom: -7px;
+            margin: 0 3px;
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop {
+            -webkit-transform-origin: 0 25%;
+            transform-origin: 0 25%
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -55%);
+            transform: scale(1) translate(-50%, -55%)
+        }
+
+        .tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-50%, -45%);
+            transform: scale(.2) translate(-50%, -45%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective] {
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateY(-10px) rotateX(0);
+            transform: perspective(700px) translateY(-10px) rotateX(0)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateY(0) rotateX(60deg);
+            transform: perspective(700px) translateY(0) rotateX(60deg)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateY(-10px);
+            transform: translateY(-10px)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale] {
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateY(-10px) scale(1);
+            transform: translateY(-10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(-10px) scale(.5);
+            transform: translateY(-10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop {
+            border-radius: 0 0 30% 30%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-roundarrow {
+            top: -7px;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            margin: 0 3px
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(0);
+            transform: rotate(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-arrow {
+            border-bottom: 8px solid #333;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            top: -7px;
+            margin: 0 3px;
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop {
+            -webkit-transform-origin: 0 -50%;
+            transform-origin: 0 -50%
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -45%);
+            transform: scale(1) translate(-50%, -45%)
+        }
+
+        .tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-50%);
+            transform: scale(.2) translate(-50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective] {
+            -webkit-transform-origin: top;
+            transform-origin: top
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateY(10px) rotateX(0);
+            transform: perspective(700px) translateY(10px) rotateX(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateY(0) rotateX(-60deg);
+            transform: perspective(700px) translateY(0) rotateX(-60deg)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateY(10px);
+            transform: translateY(10px)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale] {
+            -webkit-transform-origin: top;
+            transform-origin: top
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateY(10px) scale(1);
+            transform: translateY(10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateY(10px) scale(.5);
+            transform: translateY(10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop {
+            border-radius: 50% 0 0 50%
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-roundarrow {
+            right: -12px;
+            -webkit-transform-origin: 33.33333333% 50%;
+            transform-origin: 33.33333333% 50%;
+            margin: 3px 0
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-arrow {
+            border-left: 8px solid #333;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            right: -7px;
+            margin: 3px 0;
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop {
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%)
+        }
+
+        .tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-75%, -50%);
+            transform: scale(.2) translate(-75%, -50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-20px);
+            transform: translateX(-20px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective] {
+            -webkit-transform-origin: right;
+            transform-origin: right
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateX(-10px) rotateY(0);
+            transform: perspective(700px) translateX(-10px) rotateY(0)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateX(0) rotateY(-60deg);
+            transform: perspective(700px) translateX(0) rotateY(-60deg)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateX(-10px);
+            transform: translateX(-10px)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale] {
+            -webkit-transform-origin: right;
+            transform-origin: right
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateX(-10px) scale(1);
+            transform: translateX(-10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(-10px) scale(.5);
+            transform: translateX(-10px) scale(.5)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop {
+            border-radius: 0 50% 50% 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-roundarrow {
+            left: -12px;
+            -webkit-transform-origin: 66.66666666% 50%;
+            transform-origin: 66.66666666% 50%;
+            margin: 3px 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-roundarrow svg {
+            position: absolute;
+            left: 0;
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-arrow {
+            border-right: 8px solid #333;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            left: -7px;
+            margin: 3px 0;
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop {
+            -webkit-transform-origin: -50% 0;
+            transform-origin: -50% 0
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible] {
+            -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%)
+        }
+
+        .tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden] {
+            -webkit-transform: scale(.2) translate(-25%, -50%);
+            transform: scale(.2) translate(-25%, -50%);
+            opacity: 0
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(20px);
+            transform: translateX(20px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective] {
+            -webkit-transform-origin: left;
+            transform-origin: left
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible] {
+            -webkit-transform: perspective(700px) translateX(10px) rotateY(0);
+            transform: perspective(700px) translateX(10px) rotateY(0)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: perspective(700px) translateX(0) rotateY(60deg);
+            transform: perspective(700px) translateX(0) rotateY(60deg)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible] {
+            -webkit-transform: translateX(10px);
+            transform: translateX(10px)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale] {
+            -webkit-transform-origin: left;
+            transform-origin: left
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible] {
+            -webkit-transform: translateX(10px) scale(1);
+            transform: translateX(10px) scale(1)
+        }
+
+        .tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden] {
+            opacity: 0;
+            -webkit-transform: translateX(10px) scale(.5);
+            transform: translateX(10px) scale(.5)
+        }
+
+        .tippy-tooltip {
+            position: relative;
+            color: #fff;
+            border-radius: .25rem;
+            font-size: .875rem;
+            padding: .3125rem .5625rem;
+            line-height: 1.4;
+            text-align: center;
+            background-color: #333
+        }
+
+        .tippy-tooltip[data-size=small] {
+            padding: .1875rem .375rem;
+            font-size: .75rem
+        }
+
+        .tippy-tooltip[data-size=large] {
+            padding: .375rem .75rem;
+            font-size: 1rem
+        }
+
+        .tippy-tooltip[data-animatefill] {
+            overflow: hidden;
+            background-color: transparent
+        }
+
+        .tippy-tooltip[data-interactive],
+        .tippy-tooltip[data-interactive] .tippy-roundarrow path {
+            pointer-events: auto
+        }
+
+        .tippy-tooltip[data-inertia][data-state=visible] {
+            transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+        }
+
+        .tippy-tooltip[data-inertia][data-state=hidden] {
+            transition-timing-function: ease
+        }
+
+        .tippy-arrow,
+        .tippy-roundarrow {
+            position: absolute;
+            width: 0;
+            height: 0
+        }
+
+        .tippy-roundarrow {
+            width: 18px;
+            height: 7px;
+            fill: #333;
+            pointer-events: none
+        }
+
+        .tippy-backdrop {
+            position: absolute;
+            background-color: #333;
+            border-radius: 50%;
+            width: calc(110% + 2rem);
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transition: all cubic-bezier(.46, .1, .52, .98);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .tippy-backdrop:after {
+            content: "";
+            float: left;
+            padding-top: 100%
+        }
+
+        .tippy-backdrop+.tippy-content {
+            transition-property: opacity;
+            will-change: opacity
+        }
+
+        .tippy-backdrop+.tippy-content[data-state=visible] {
+            opacity: 1
+        }
+
+        .tippy-backdrop+.tippy-content[data-state=hidden] {
+            opacity: 0
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" async="" src="./Portfolio sample_files/js"></script>
+    <script type="text/javascript" async="" src="./Portfolio sample_files/analytics.js.download"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        </script>
+    <script async="" src="./Portfolio sample_files/gtm.js.download"></script>
+    <script type="text/javascript">(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MT2Q85P');</script>
+    <meta name="viewport" content="width=device-width">
+    <title>Hiro Tanaka & modern web fullstack developer</title>
+    <meta name="description"
+        content="Specializing in custom WordPress theme development, search engine optimization, responsive design, and custom web app solutions.">
+    <meta name="keywords"
+        content="Web Designer Halifax, Web Developer Halifax, Halifax WordPress Development, Web Developer Portfolio, Jonny MacEachern, Halifax SEO, Tweetmap">
+    <meta name="author" content="Jonny MacEachern">
+    <link rel="shortcut icon" href="./dist/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/favicons/favicon-32x32.png">
+    <link rel="manifest" href="./dist/favicons/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#5700b3">
+    <meta name="application-name" content="Hiro.me">
+    <link rel="apple-touch-icon" sizes="57x57" href="./dist/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./dist/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./dist/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./dist/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./dist/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./dist/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./dist/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./dist/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./dist/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="./dist/favicons/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Hiro.me">
+    <link rel="icon" type="image/png" sizes="228x228" href="./dist/favicons/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/dist/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/dist/favicons/browserconfig.xml">
+    <meta property="og:title" content="Jonny MacEachern | Halifax WordPress &amp; Web App Development">
+    <meta property="og:site_name" content="Hiro.me">
+    <meta property="og:url" content="Hiro.me">
+    <meta property="og:description"
+        content="Specializing in Fullstack WEB development, search engine optimization, responsive design, and custom web app solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/dist/images/og.jpg">
+    <link rel="stylesheet" href="./dist/css/app.css">
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0"><noscript><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MT2Q85P" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <header id="header" class="header header--fixed">
+        <div class="container">
+            <div class="row align-items-center h-100">
+                <nav class="col-9 col-lg-6">
+                    <div class="header__logo">
+                        <div class="header__logo-icon"></div><a href="#main">Hiro.me</a>
+                    </div>
+                    <div class="header__status header__status--success aos-init aos-animate" data-aos="zoom-in"
+                        data-aos-delay="500" data-aos-duration="500">Online</div>
+                </nav>
+                <nav class="col-3 col-lg-6" id="menu"><svg class="header__burger d-lg-none collapsed"
+                        data-toggle="collapse" data-target="#header-menu" aria-expanded="false">
+                        <use xlink:href="sprite.svg#list"></use>
+                    </svg>
+                    <ul class="header__menu collapse" id="header-menu">
+                        <li class="header__menu-item d-none"><a class="header__menu-link nav-link active"
+                                href="#hero">About</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link nav-link"
+                                href="#services">Services</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link nav-link"
+                                href="#portfolio">Portfolio</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link nav-link" href="#pricing">Pricing</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <section id="hero" class="hero" data-spy="scroll" data-target="#menu">
+            <div class="hero__inner">
+                <div class="hero__divider">
+                    <div class="container section text-center aos-init aos-animate" data-aos="fade-in"
+                        data-aos-duration="250">
+                        <div class="row aos-init aos-animate" data-aos="fade-in">
+                            <div class="col-md-10 col-lg-7 mx-auto">
+                                <h1 class="text-uppercase">Hiro Tanaka <br> <span>Modern Web App Development</span>
+                                </h1>
+                                <p>Specializing in Fullstack Web development. If you're a business seeking a web
+                                    presence
+                                    or are looking to hire, contact me <a href="#contact">here</a>.</p>
+                                <a href="#portfolio" class="btn btn-secondary--gradient">Get
+                                    started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" data-spy="scroll" data-target="#menu" data-offset="0">
+            <div class="container section pt-0">
+                <div class="glide aos-init aos-animate glide--ltr glide--carousel glide--swipeable" data-aos="fade-in"
+                    data-aos-offset="0">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides"
+                            style="transition: transform 0ms cubic-bezier(0.165, 0.84, 0.44, 1) 0s; width: 4034px; transform: translate3d(-1011px, 0px, 0px);">
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#mobile-phone"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Mobile-friendly</h2>
+                                <p>A responsive design makes your website accessible to all users, regardless of their
+                                    device.</p>
+                            </li>
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#checklist"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Backend Technologies</h2>
+                                <ul class="c">
+                                    <li>Laravel & CI MVC</li>
+                                    <li>Node.js</li>
+                                    <li>Django</li>
+                                    <li>Spring Framework</li>
+                                </ul>
+                            </li>
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#pencil"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Front end <br> Technologies</h2>
+                                <p>
+                                <ul class="c">
+                                    <li>Html & CSS Design</li>
+                                    <li>Responsive</li>
+                                    <li>React.js</li>
+                                    <li>Vue.js</li>
+                                </ul>
+                                </p>
+
+                            </li>
+                            <li class="glide__slide text-center glide__slide--active"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#ui"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Design + Development</h2>
+                                <p>Clean, modern designs - optimized for performance, search engines, and converting
+                                    users to customers.</p>
+                            </li>
+                            <li class="glide__slide text-center"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#commerce-and-shopping"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">eCommerce</h2>
+                                <p>Integration of eCommerce platforms, payment gateways, custom product templates, and
+                                    more.</p>
+                            </li>
+                            <li class="glide__slide text-center"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#cloud-computing"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Analytics</h2>
+                                <p>Get insights into who is browsing your site so that you can make smarter business
+                                    decisions.</p>
+                            </li>
+                            <li class="glide__slide text-center"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#mobile-phone"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Mobile-friendly</h2>
+                                <p>A responsive design makes your website accessible to all users, regardless of their
+                                    device.</p>
+                            </li>
+                            <li class="glide__slide text-center"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#checklist"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Website Backend Technologies</h2>
+                                <p>
+                                <ul class="c">
+                                    <li>Laravel & CI MVC</li>
+                                    <li>Node.js</li>
+                                    <li>Django</li>
+                                    <li>Spring Framework</li>
+                                </ul>
+                                </p>
+                            </li>
+                            <li class="glide__slide text-center"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#pencil"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Frontend Technologies</h2>
+                                <p>
+                                <ul class="c">
+                                    <li>Html & CSS Design</li>
+                                    <li>Responsive</li>
+                                    <li>React.js</li>
+                                    <li>Vue.js</li>
+                                </ul>
+                                </p>
+                            </li>
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#ui"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Design + Development</h2>
+                                <p>Clean, modern designs - optimized for performance, search engines, and converting
+                                    users to customers.</p>
+                            </li>
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-left: 5px; margin-right: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#commerce-and-shopping"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">eCommerce</h2>
+                                <p>Integration of eCommerce platforms, payment gateways, custom product templates, and
+                                    more.</p>
+                            </li>
+                            <li class="glide__slide text-center glide__slide--clone"
+                                style="width: 327px; margin-left: 5px;"><svg class="icon">
+                                    <use xlink:href="sprite.svg#cloud-computing"></use>
+                                </svg>
+                                <h2 class="h4 color-primary text-uppercase">Analytics</h2>
+                                <p>Get insights into who is browsing your site so that you can make smarter business
+                                    decisions.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-glide-el="controls"><button class="glide__control--prev"
+                            data-glide-dir="&lt;"></button><button class="glide__control--next"
+                            data-glide-dir="&gt;"></button></div>
+                    <div class="text-center"><a href="#portfolio" class="btn btn-outline-primary">Learn
+                            more</a></div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="showcase" data-spy="scroll" data-target="#menu">
+            <hr>
+            <div class="container section">
+                <div class="row align-items-center h-100 text-center text-lg-left">
+                    <div class="col-lg-6 p-lg-0">
+                        <a href="https://marker.io?via=jonny" target="_blank">
+                            <video autoplay="" loop=""
+                                style="background-image: url(./dist/images/Untitled7.jpg); max-width: 50%;" muted=""
+                                playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                                <source src="./video/marker-io.mp4" data-wf-ignore="true">
+                                <source src="./video/marker-io.webm" data-wf-ignore="true">
+                            </video>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 mx-auto py-3">
+                        <h3 class="h3">Marker.io <span class="badge badge-primary badge-sm">Recommended</span></h3>
+                        <p class="showcase__description mb-4 color-gray">Collect client feedback and report bugs into
+                            Jira, Trello, Asana, Github directly from your site with screenshots, annotations, console
+                            logs, and more.</p> <a href="https://marker.io/?via=jonny" class="btn btn-primary mr-lg-3"
+                            target="_blank">Get free trial</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container section">
+                <h2 class="pre text-center">Portfolio</h2>
+                <div class="row align-items-center h-100 text-center text-lg-left">
+                    <div class="col-lg-6 p-lg-0">
+                        <video autoplay="" loop=""
+                            style="background-image: url(./dist/images/AGYLE\ INTELLIGENCE.png); max-width: 50%;"
+                            muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                            <source src="./video/marker-io.mp4" data-wf-ignore="true">
+                            <source src="./video/marker-io.webm" data-wf-ignore="true">
+                        </video>
+
+                    </div>
+                    <div class="col-lg-5 mx-auto py-3">
+                        <h3 class="h3">Agyle Intelligence <span class="badge badge-primary badge-sm">2019</span></h3>
+                        <p class="showcase__description mb-4 color-gray">A platform for automating data collection and
+                            reporting throughout teams, operations and supply chains.</p>
+                        <p class="color-gray"><small>Design by <a href="https://dribbble.com/KristinKillam"
+                                    target="_blank">Kristin Killam</a></small>.</p> <a
+                            href="https://www.agyleintelligence.com/" data-lightbox=""
+                            class="btn btn-primary mr-lg-3 d-none d-lg-inline-block">Preview</a> <a
+                            href="https://agyleintelligence.com/" class="btn btn-outline-primary" target="_blank">Visit
+                            site</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </section>
+        <section id="pricing" class="bg-primary section" data-spy="scroll" data-target="#menu">
+            <h2 class="pre text-center color-white">Pricing per build</h2>
+            <div class="container pt-4">
+                <div class="pricing">
+                    <div class="pricing__inner">
+                        <div class="row text-center mb-4">
+                            <div class="col-md-8 mx-auto col-lg-4">
+                                <div class="pricing__plan pricing__plan--1 aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-duration="750" data-aos-delay="0" data-aos-offset="0">
+                                    <h3 class="pricing__name">Basic</h3>
+                                    <ul class="pricing__features">
+                                        <li class="pricing__feature">Website Audit</li>
+                                        <li class="pricing__feature">Design</li>
+                                        <li class="pricing__feature">Development</li>
+                                    </ul>
+                                    <div><a href="#contact" data-package="Basic"
+                                            class="btn btn-sm mt-3 btn-outline-default">Request quote</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 mx-auto col-lg-4">
+                                <div class="pricing__plan pricing__plan--2 aos-init aos-animate" data-aos="fade-up"
+                                    data-aos-duration="750" data-aos-delay="250">
+                                    <h3 class="pricing__name">Standard</h3>
+                                    <ul class="pricing__features">
+                                        <li class="pricing__feature">Website Audit</li>
+                                        <li class="pricing__feature">Design</li>
+                                        <li class="pricing__feature">Development</li>
+                                        <li class="pricing__feature">Backups</li>
+                                        <li class="pricing__feature">Analytics</li>
+                                        <li class="pricing__feature">Live Chat</li>
+                                        <li class="pricing__feature">Search Engine Optimization</li>
+                                        <li class="pricing__feature"><span class="has-tooltip" data-tippy=""
+                                                data-tippy-content="Includes the integration of the WordPress content management system. Easily update your content without knowing how to code."
+                                                tabindex="0">Content Management</span></li>
+                                    </ul>
+                                    <div><a href="#contact" data-package="Standard"
+                                            class="btn btn-sm mt-3 btn-primary">Request quote</a></div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-8 mx-auto col-lg-4">
+                                <div class="pricing__plan pricing__plan--3 aos-init" data-aos="fade-up"
+                                    data-aos-duration="750" data-aos-delay="500">
+                                    <h3 class="pricing__name">Premium</h3>
+                                    <ul class="pricing__features">
+                                        <li class="pricing__feature">Website Audit</li>
+                                        <li class="pricing__feature">Design</li>
+                                        <li class="pricing__feature">Development</li>
+                                        <li class="pricing__feature">Backups</li>
+                                        <li class="pricing__feature">Analytics</li>
+                                        <li class="pricing__feature">Live Chat</li>
+                                        <li class="pricing__feature">Search Engine Optimization</li>
+                                        <li class="pricing__feature"><span class="has-tooltip" data-tippy=""
+                                                data-tippy-content="Includes the integration of the WordPress content management system. Easily update your content without knowing how to code."
+                                                tabindex="0">Content Management</span></li>
+                                        <li class="pricing__feature">Maintenance Agreement</li>
+                                        <li class="pricing__feature">eCommerce</li>
+                                        <li class="pricing__feature"><span class="has-tooltip" data-tippy=""
+                                                data-tippy-content="Includes configuration of email hosting service such as G Suite (Gmail) and Outlook."
+                                                tabindex="0">Email Setup</span></li>
+                                        <li class="pricing__feature"><span class="has-tooltip" data-tippy=""
+                                                data-tippy-content="Hosting plan will be calculating based on traffic."
+                                                tabindex="0">Hosting</span></li>
+                                    </ul><a href="#contact" data-package="Premium" class="btn btn-secondary btn-sm my-2"
+                                        id="request-quote">Request quote</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="item" data-aos="fade-up">1</div> -->
+                        </div>
+                    </div>
+                    <div data-aos="fade-in" data-aos-offset="0" class="aos-init">
+                        <div class="pricing__footnote">Prices listed in CAD.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer id="footer" class="footer">
+            <div class="container pb-5" id="contact">
+                <div class="row">
+                    <div class="col-md-7 mx-auto">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-12 text-center">
+                                <h2>Get in touch</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="contact-form"
+                                    action="https://getform.io/f/c24e3714-791f-4a2b-8a82-9c4caf0c7a24" method="POST"
+                                    class="form">
+                                    <div class="form__inner">
+                                        <div class="row">
+                                            <div class="col-md-6 pr-md-2">
+                                                <div class="form-group"><label for="email">Email</label><input
+                                                        type="email" name="email" class="form-control" required=""
+                                                        id="email"></div>
+                                            </div>
+                                            <div class="col-md-6 pl-md-2">
+                                                <div class="form-group"><label for="package">Plan <small
+                                                            class="ml-1">(optional)</small></label><select
+                                                        name="package" class="form-control" id="package">
+                                                        <option value="">&nbsp;</option>
+                                                        <option value="Basic">Basic</option>
+                                                        <option value="Standard">Standard</option>
+                                                    </select></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label for="message">Message</label><textarea
+                                                name="message" class="form-control" rows="5" id="message"
+                                                required=""></textarea></div>
+                                        <div class="text-center mt-4"><button type="submit"
+                                                class="btn btn-primary">Send</button></div>
+                                    </div>
+                                    <div class="form__loader">
+                                        <div class="loader">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="text-center has-elipsis mb-5">Sending</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <nav>
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item"><a href="mailto:info@Hiro.me" class="footer__menu-link">Email</a>
+                        </li>
+                        <li class="footer__menu-item"><a href="https://github.com/crystalcoder1029"
+                                class="footer__menu-link" target="_blank">GitHub</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <link href="./Portfolio sample_files/css" rel="stylesheet">
+        <script src="../My Portfolio_sample/Portfolio sample_files/analytics.js.download"
+            type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet">
+        <script src="/dist/js/app.js" type="text/javascript"></script>
+    </main>
+    <div class="drift-trigger"></div>
+</body>
+
+</html>
